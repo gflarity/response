@@ -9,10 +9,16 @@ Plugins are expected to play nice by not blocking the event loop and being mindf
 
 ## Quick Start
 
+Coming soon.
+
 
 ## Developing Observers
 
+Coming soon.
 
 ## Developing Responders
+
+Coming soon.
+
 
 
