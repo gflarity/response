@@ -1,24 +1,25 @@
 # Response - Monitoring doesn't have to suck.
 
-Response is an simple Graphite proxy with plugable alerting support. It's first priority is to deliver messages to Graphite rapidly. In the event that Graphite goes down, messages can optionally be buffered using Redis to provide arbitrary levels of durability/persistence until Graphite is back.
+Response is an simple Graphite proxy with plugable alerting support. It's first priority is to deliver messages to Graphite rapidly. In the event that Graphite goes down, messages will be buffered until Graphite is back.  Eventually Redis will be optionally supported to provide arbitrary levels of durability/persistence 
 
-The second priority of Response is to provide a plugable alerting/response system. Graphite metric paths/names become events which 'Observer' plugins may subscribe to using the EventEmitter2 module/interface. They may raise different levels of alerts analogous to log levels. DEBUG, INFO, WARN, ERROR, FATAL. 'Reponder' plugins can be configured to subscribe to these different alert levels and respond as desired. 'Responder' plugins will be provided for email, sms, and jabber.
-
-Plugins are expected to play nice by not blocking the event loop and being mindful to store state safely. 
-
+The second priority of Response is to provide a plugable alerting/response system. 
 
 ## Quick Start
 
-Coming soon.
+./bin/response
 
+## Developing Plugins
 
-## Developing Observers
+Check out the example_plugins directory.
 
-Coming soon.
+Plugins are expected to play nice by not blocking the event loop and being mindful to store state safely. They receive two objects which both of which inherit from EventEmitter2. 
 
-## Developing Responders
+The first is the GraphiteEventEmitter. It can be used to subscribe to arbitrary events using wildcards. Plugins may use this to keep track of events they care about. 
 
-Coming soon.
+The second is the Dispatcher. It too can be used to subscribe to arbitrary events, but the source of these events is exclusively other plugins. Plugins may use this publish or subscribe to alerts.
+
+Plugins generally fall under too categories by convention. Those that identify certain conditions by subscribing to Graphite events, and those that respond to the conditions identified by the former.
+
 
 
 
