@@ -1,0 +1,21 @@
+/usr/bin/env node
+
+var response = require('../lib/response.js');
+
+//load the config
+var config = { 
+    "listen_host" : "localhost",
+    "listen_port" : 2003,
+    "graphite_host" : "localhost",
+    "graphite_port" : 2004, 
+};
+
+//initialize the fake pluggin and setup test cases
+
+
+//create the fake response
+//response.Response( config );
+
+//create the fake nervous, send to the fake response
+
+

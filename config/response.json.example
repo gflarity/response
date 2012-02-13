@@ -1,0 +1,6 @@
+{ 
+    "listen_host" : "localhost",
+    "listen_port" : 2003,
+    "graphite_host" : "localhost",
+    "graphite_port" : 2004, 
+}
