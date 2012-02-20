@@ -6,4 +6,4 @@ var response = require('../lib/response.js');
 //load the config
 var config = JSON.parse( fs.readFileSync( require.resolve('../config/reponse.json') ) );
 
-response.Response( config );
+var my_response = new response.Response( config );
