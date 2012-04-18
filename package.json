@@ -15,6 +15,9 @@
     "type": "git",
     "url": "https://github.com/gflarity/response.git"
   },
+  "scripts" : {
+  	    "test" : "cd test; node test_basic.js"
+   },
   "keywords": [
     "monitoring",
     "plugable",

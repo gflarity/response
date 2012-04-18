@@ -1,9 +1,0 @@
-/usr/bin/env node
-
-var fs = require('fs');
-var response = require('../lib/response.js');
-
-//load the config
-var config = JSON.parse( fs.readFileSync( require.resolve('../config/reponse.json') ) );
-
-var my_response = new response.Response( config );

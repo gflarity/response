@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var net = require('net');
+
+var socket =  net.createConnection( 2003, function() {
+            
+            var send_heartbeat = function() {
+                
+                var now = Math.floor( new Date().getTime()/1000 )
+                socket.write( 'nervous.heartbeat 1 ' + now + '\n' );
+                console.log( 'heartbeat sent' );
+            };
+            
+            setInterval( send_heartbeat, 250 );
+        });
+        
+

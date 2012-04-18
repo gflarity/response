@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var fs = require('fs');
+var response = require('../lib/response.js');
+
+process.on( 'uncaughtException', function(err) {  console.log(err); } );
+
+var plugin_path = process.argv[2] ;
+
+//load the config
+var config =  { 
+    "listen_host" : "localhost",
+    "listen_port" : 2003,
+    "graphite_host" : "localhost",
+    "graphite_port" : 2004 
+
+}
+
+config.plugin_path = path.dirname( require.resolve( plugin_path + '/.keep'  ) );
+var my_response = new response.Response( config );
+

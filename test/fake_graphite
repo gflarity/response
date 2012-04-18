@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var net = require('net');
+
+//start fake nervous    
+var fake_graphite = net.createServer( function( socket ) {
+        
+    var buffer = '';
+    socket.on('data', function( data ) {
+        
+        buffer += data;
+        if ( buffer.indexOf( '\n' ) !== -1 ) {
+            
+            if ( buffer.match( /nervous\.heartbeat 1 \d+\n/ ) ) {
+                console.log('heartbeat received');
+            }
+            buffer = '';
+        }
+        
+    });
+    
+} );
+fake_graphite.listen( 2004 );

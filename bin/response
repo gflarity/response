@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var response = require('../lib/response.js');
+var argv = require('optimist').argv;
+
+var config_file = argv.c || '../config/reponse.json';
+
+//load the config
+var config = JSON.parse( fs.readFileSync( require.resolve( config_file ) ) );
+
+var my_response = new response.Response( config );
