@@ -1,39 +1,38 @@
 {
   "name": "response-system",
   "preferGlobal": false,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Geoff Flarity <geoff.flarity@gmail.com>",
   "description": "plugable response system meant to work with Nervous and graphite",
-  "contributors": [ 
-    {
-      "name": "Geoff Flarity",
-      "email": "geoff.flarity@gmail.com"
-    } 
+  "contributors": [
+    "Geoff Flarity <geoff.flarity@gmail.com>"
   ],
   "main": "./bin/responsive",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gflarity/response.git"
+    "url": "git://github.com/gflarity/response.git"
   },
-  "scripts" : {
-  	    "test" : "cd test; node test_basic.js"
-   },
+  "scripts": {
+    "test": "cd test; node test_basic.js"
+  },
   "keywords": [
     "monitoring",
     "plugable",
     "plugin",
     "alerting"
   ],
-  "dependencies" : {
-    "eventemitter2" : "0.4.8"
+  "dependencies": {
+    "eventemitter2": "0.4.8"
   },
   "noAnalyze": true,
-  "devDependencies": {
-  },
-  "bundleDependencies": [
-  ],
+  "devDependencies": {},
+  "bundleDependencies": [],
   "license": "MIT",
   "engine": {
     "node": ">=0.6"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
   }
 }
