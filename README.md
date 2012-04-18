@@ -4,6 +4,8 @@ Response is an simple Graphite proxy with plugable alerting support. It's first 
 
 The second priority of Response is to provide a plugable alerting/response system. 
 
+## Test Status - [![test status](https://secure.travis-ci.org/gflarity/response.png)](http://travis-ci.org/gflarity/response)
+
 ## Quick Start
 
 ./bin/response
