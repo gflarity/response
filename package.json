@@ -1,7 +1,7 @@
 {
   "name": "response-system",
   "preferGlobal": false,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Geoff Flarity <geoff.flarity@gmail.com>",
   "description": "plugable response system meant to work with Nervous and graphite",
   "contributors": [
@@ -25,10 +25,9 @@
     "eventemitter2": "0.4.8"
   },
   "noAnalyze": true,
-   "devDependencies" : {
-        "tap" : "0.2.4"
-    },
-
+  "devDependencies": {
+    "tap": "0.2.4"
+  },
   "bundleDependencies": [],
   "license": "MIT",
   "engine": {
