@@ -25,7 +25,10 @@
     "eventemitter2": "0.4.8"
   },
   "noAnalyze": true,
-  "devDependencies": {},
+   "devDependencies" : {
+        "tap" : "0.2.4"
+    },
+
   "bundleDependencies": [],
   "license": "MIT",
   "engine": {
