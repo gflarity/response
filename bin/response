@@ -4,7 +4,7 @@ var fs = require('fs');
 var response = require('../lib/response.js');
 var argv = require('optimist').argv;
 
-var config_file = argv.c || '../config/reponse.json';
+var config_file = argv.c || '../config/response.json';
 
 //load the config
 var config = JSON.parse( fs.readFileSync( require.resolve( config_file ) ) );
